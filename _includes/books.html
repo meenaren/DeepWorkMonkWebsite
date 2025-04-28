@@ -1,0 +1,20 @@
+{% assign project = include.content %}
+
+<div class="grid-item">
+  <a href="{{ project.url | relative_url }}">
+    <div class="card hoverable">
+      <img src="{{ project.img | relative_url }}" alt="{{ project.title }}" class="card-img-top" />
+      <div class="card-body">
+        <h2 class="card-title">{{ project.title }}</h2>
+        <p class="card-text">{{ project.description }}</p>
+        <div class="row ml-1 mr-1 p-0">
+          {% if project.author %}
+          <div class="project-author">
+            <div>By {{ project.author }}</div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

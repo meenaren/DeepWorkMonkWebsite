@@ -1,25 +1,30 @@
-# Progress: Book Recommendations Page Migration
+# Progress: Book Recommendations Page Migration (Jekyll Site)
 
-**Current Status:** Initial HTML page created
+**Current Status:** Jekyll site structure identified; Migrated content exists as a post. Memory Bank updated.
 
 **What Works:**
-- Core Memory Bank files have been created.
-- Project goals and context are documented.
-- `index.html` created with migrated text content.
-- Basic embedded CSS styling applied.
-- Resized images from `resized/` directory are included in `index.html`.
-- Original links added to book cover images in `index.html` based on user feedback.
-- Main title (`<h1>`) alignment changed to left based on user feedback.
+- **Jekyll Structure:** Basic Jekyll site structure is in place (`_config.yml`, `Gemfile`, `_posts`, `_layouts`, `_includes`, `assets`).
+- **Migrated Content:** The book recommendation content exists in `_posts/2025-04-28-books-i-recommend.html`.
+- **Images:** Resized images are correctly placed in `assets/images/books/`.
+- **Image Links:** Original external links were added to the images within the post file.
+- **Memory Bank:** Core files created and updated to reflect the Jekyll architecture and current understanding.
 
-**What's Left to Build:**
-- Local review of `index.html`.
-- GitHub repository setup and configuration for GitHub Pages (User Task).
-- Committing and pushing project files (`index.html`, `resized/`, `memory-bank/`) to the repository (User Task).
+**What's Left to Build/Verify:**
+- **Verify Post Rendering:** Confirm the post content (`_posts/2025-04-28-books-i-recommend.html`) renders correctly using the assigned layout (`_layouts/post.html`) and styles (`assets/css/style.scss`).
+    - Check image paths (`/assets/images/books/...`).
+    - Verify title alignment adjustment within the Jekyll context.
+- **Local Preview (Recommended):** Run `bundle exec jekyll serve` to preview the site locally, specifically the book recommendations post page.
+- **GitHub Pages Deployment (User Task):**
+    - Set up GitHub repository.
+    - Configure for GitHub Pages deployment.
+    - Commit and push all necessary project files.
 
 **Known Issues:**
-- None at this stage.
+- None identified, but verification of the post rendering within the Jekyll environment is pending.
 
 **Evolution of Project Decisions:**
-- Initial decision to use embedded CSS for simplicity.
-- Initial decision to omit external links from book images was revised based on user feedback; links have now been added.
-- Title alignment changed from center to left based on user feedback.
+- **Initial Misunderstanding:** Project was initially treated as a single static HTML file.
+- **Discovery:** Identified the project uses Jekyll based on file structure and `index.html` content.
+- **Memory Bank Correction:** Updated `systemPatterns.md`, `techContext.md`, `activeContext.md`, and this file (`progress.md`) to reflect the Jekyll architecture.
+- Image links were added based on user feedback (decision remains).
+- Title alignment was adjusted (needs verification in Jekyll context).

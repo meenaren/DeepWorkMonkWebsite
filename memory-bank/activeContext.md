@@ -1,36 +1,43 @@
-# Active Context: Initial Migration Setup
+# Active Context: Jekyll Site Setup & Content Migration
 
 **Current Focus:**
-- Adjusting the alignment of the main title (`<h1>`) in `index.html` to left-aligned based on user feedback.
+- Updating Memory Bank documentation to accurately reflect the project as a Jekyll site.
+- Verifying the migrated content within the Jekyll structure.
 
 **Recent Changes:**
-- Created core Memory Bank files.
-- Created initial `index.html`.
-- Added original links to book cover images in `index.html`.
-- Updated relevant Memory Bank files (`productContext.md`, `progress.md`).
+- **Discovery:** Realized the project is a Jekyll site, not a single static HTML page as initially assumed.
+- Updated `memory-bank/systemPatterns.md` to describe Jekyll architecture.
+- Updated `memory-bank/techContext.md` to list Jekyll-related technologies and setup.
+- Previous changes (before Jekyll discovery):
+    - Created core Memory Bank files (based on initial incorrect assumption).
+    - Created initial `index.html` (now understood as the Jekyll site homepage).
+    - Created `_posts/2025-04-28-books-i-recommend.html` containing the migrated content.
+    - Added original links to book cover images within the post file.
+    - Moved resized images to `assets/images/books/`.
+    - Adjusted title alignment in the post layout/CSS (needs verification in Jekyll context).
 
 **Next Steps:**
-1. Modify the CSS rule for `h1` in `index.html` to remove center alignment.
-2. Update `progress.md`.
-3. Review the updated `index.html` locally.
-4. (User Task) Set up a GitHub repository.
-5. (User Task) Configure the repository for GitHub Pages.
-6. (User Task) Commit and push `index.html`, the `resized/` directory, and the `memory-bank/` directory to the repository.
+1.  **Update `memory-bank/progress.md`** to reflect the Jekyll context and current status.
+2.  **Verify Post Content & Layout:**
+    - Read `_posts/2025-04-28-books-i-recommend.html` to confirm content and image paths (`/assets/images/books/...`).
+    - Read relevant layout file (likely `_layouts/post.html`) and CSS (`assets/css/style.scss`) to understand how the post is rendered and styled.
+    - Check if the title alignment change was applied correctly within the Jekyll structure (e.g., in `style.scss` or the post layout).
+3.  **Local Preview (Optional but Recommended):** Use `bundle exec jekyll serve` to build and preview the site locally, specifically checking the `/blogs/books-i-recommend.html` page (or similar, depending on permalink settings). This requires Ruby/Bundler/Jekyll setup.
+4.  **(User Task)** Ensure GitHub repository is set up and configured for GitHub Pages (using the correct branch).
+5.  **(User Task)** Commit and push all project files (`_config.yml`, `Gemfile`, `index.html`, `_posts/`, `_layouts/`, `_includes/`, `assets/`, `memory-bank/`, etc.) to the repository.
 
 **Active Decisions & Considerations:**
-- Start with embedded CSS for simplicity.
-- Preserve the original external links for the book images (updated decision based on feedback).
-- Use the pre-resized images available locally in the `resized/` directory.
-- Ensure HTML structure is semantic and reflects the source content's hierarchy.
+- The project uses Jekyll. All further actions must account for Jekyll's structure and build process.
+- Image paths in the post file must be correct relative to the generated site structure (e.g., `/assets/images/books/`).
+- Styling changes (like title alignment) should be applied within the Jekyll framework (e.g., `style.scss`).
+- Preserving original external links for book images remains the decision.
 
 **Important Patterns & Preferences:**
-- Maintain clear documentation in the Memory Bank.
-- Follow standard HTML5 best practices.
-- Keep the initial implementation simple and focused on core content migration.
+- Maintain accurate Memory Bank documentation reflecting the Jekyll structure.
+- Follow Jekyll best practices for content, layouts, and assets.
 
 **Learnings & Insights:**
-- The source content is a blog post recommending books related to self-improvement themes.
-- The key elements to migrate are the main text and the book cover images.
-- The target is a simple static page suitable for GitHub Pages.
-- Basic embedded CSS provides sufficient styling for readability.
-- Using the `resized/` directory for images works as expected.
+- The project is a Jekyll-based website hosted on GitHub Pages.
+- The migrated content exists as a post within the `_posts` directory.
+- Initial assumptions about a single static HTML file were incorrect. Verification steps (like viewing `index.html`) are crucial.
+- Understanding the specific Jekyll theme/layout (`_layouts/post.html`, `assets/css/style.scss`) is necessary to confirm styling and structure.

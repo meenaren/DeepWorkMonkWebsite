@@ -1,0 +1,36 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Custom styles for Deep Work Monk website */
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.book-item {
+  width: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.book-item img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+}
+
+.book-title {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .book-item {
+    width: 150px;
+  }
+}

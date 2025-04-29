@@ -16,3 +16,17 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# Jekyll generated files
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Ruby dependencies
+.bundle
+vendor
+
+# OS specific files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    {% seo %}
+  </head>
+  <body>
+    <div id="container">
+      <div class="inner">
+        <header>
+          <h1>{{ page.title | default: site.title }}</h1>
+          <h2>{{ page.description | default: site.description }}</h2>
+          {% include navigation.html %}
+        </header>
+        <section id="main_content">
+          {{ content }}
+        </section>
+        <footer>
+          <p>&copy; {{ site.time | date: '%Y' }} Deep Work Monk. All rights reserved.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

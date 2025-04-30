@@ -5,14 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- Adding favicon references -->
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
     {% seo %}
   </head>
   <body>
     <div id="container">
       <div class="inner">
         <header>
-          <h1>{{ page.title | default: site.title }}</h1>
-          <h2>{{ page.description | default: site.description }}</h2>
+          <div class="header-content">
+            <div class="header-text">
+              <h1>{{ page.title | default: site.title }}</h1>
+              <h2>{{ page.description | default: site.description }}</h2>
+            </div>
+            <div class="header-logo">
+              <a href="{{ site.baseurl }}/" title="Home">
+                <img src="{{ '/assets/images/brand/logo_50px.png' | relative_url }}" alt="Deep Work Monk Logo" class="brand-logo">
+              </a>
+            </div>
+          </div>
           {% include navigation.html %}
         </header>
         <section id="main_content">

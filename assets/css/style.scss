@@ -4,6 +4,58 @@
 @import "{{ site.theme }}";
 
 /* Custom styles for Deep Work Monk website */
+/* Header with logo styling */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-text {
+  flex: 1;
+  padding-right: 15px; /* Add padding to prevent text from getting too close to logo */
+}
+
+.header-logo {
+  margin-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0; /* Prevent logo from shrinking */
+}
+
+.brand-logo {
+  max-width: 50px; /* Reduced from 80px to 50px */
+  height: auto;
+  border-radius: 6px; /* Slightly reduced radius to match smaller size */
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    /* Keep row layout instead of switching to column */
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+  
+  .header-text {
+    /* Take up less space to accommodate logo */
+    flex: 0 1 75%; 
+  }
+  
+  .header-logo {
+    /* Keep the logo on the right */
+    flex: 0 0 auto;
+    margin: 0 0 0 auto;
+    align-self: flex-start; /* Align to top */
+  }
+  
+  .brand-logo {
+    max-width: 40px; /* Make slightly smaller on mobile */
+  }
+}
+
+/* Custom styles for Deep Work Monk website */
 .book-container {
   display: flex;
   flex-wrap: wrap;

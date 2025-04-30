@@ -8,6 +8,17 @@
     <!-- Adding favicon references -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
+    <!-- Force trailing slashes for consistent URLs -->
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <script>
+      // Redirect URLs without trailing slashes to URLs with trailing slashes
+      (function() {
+        var location = window.location;
+        if (location.pathname.substr(-1) !== '/' && location.pathname.length > 1) {
+          location.replace(location.protocol + '//' + location.host + location.pathname + '/' + location.search);
+        }
+      })();
+    </script>
     <!-- Mobile responsiveness fix for Buy Me a Coffee widget - only for opened widget content -->
     <style>
       @media screen and (max-width: 768px) {

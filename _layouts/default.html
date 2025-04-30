@@ -8,6 +8,18 @@
     <!-- Adding favicon references -->
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
     <link rel="apple-touch-icon" href="{{ '/assets/images/favicon/favicon-32x32.png' | relative_url }}">
+    <!-- Mobile responsiveness fix for Buy Me a Coffee widget - only for opened widget content -->
+    <style>
+      @media screen and (max-width: 768px) {
+        /* Fix for the widget content when opened */
+        #bmc-wbtn + div {
+          z-index: 999 !important;
+          width: auto !important;
+          max-width: 90vw !important;
+          right: 0 !important;
+        }
+      }
+    </style>
     {% seo %}
   </head>
   <body>
@@ -32,6 +44,8 @@
         </section>
         <footer>
           <p>&copy; {{ site.time | date: '%Y' }} Deep Work Monk. All rights reserved.</p>
+          <!-- Buy Me a Coffee Widget -->
+          <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="meenugct" data-description="Support me on Buy me a coffee!" data-message="" data-color="#FF5F5F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
         </footer>
       </div>
     </div>

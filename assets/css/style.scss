@@ -114,8 +114,9 @@
 }
 
 .image-gallery img {
-  max-width: 150px;
-  height: auto;
+  width: 120px;  /* Set fixed width instead of max-width */
+  height: 180px; /* Set fixed height for uniform appearance */
+  object-fit: contain; /* Maintain aspect ratio without stretching */
   border: 1px solid #ddd;
   transition: transform 0.3s ease;
 }
